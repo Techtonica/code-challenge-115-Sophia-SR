@@ -60,13 +60,13 @@ for (let foods in array){
 	}
 	//If the difference between today's date and the foods' expiration date is greater than 7, push food into toToss array 
   if( today - expDate >= 7){
-		toToss.push(items[foods]);
+		toToss.push(items[foods].name);
 	}
  }
  return toToss;
 }
 
-cleanOutFridge(items);
+console.log(cleanOutFridge(items));
 
 
 
