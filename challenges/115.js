@@ -45,7 +45,7 @@ for (let foods in array){
 	// Convert both dates to milliseconds
 	let today = new Date();
 	let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-	let expDate = new Date(items[foods].expiryDate);
+	let expDate = new Date(array[foods].expiryDate);
   // Calculate the difference in milliseconds
   let diffDate = today - expDate;
 	//This variable will help us convert the date back into days
@@ -60,7 +60,7 @@ for (let foods in array){
 	}
 	//If the difference between today's date and the foods' expiration date is greater than 7, push food into toToss array 
   if( today - expDate >= 7){
-		toToss.push(items[foods].name);
+		toToss.push(array[foods].name);
 	}
  }
  return toToss;
